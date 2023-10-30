@@ -1,4 +1,4 @@
-WanderLust Project
+#WanderLust Project
 
 Project Summary:
 
@@ -33,7 +33,7 @@ Additional Features:
 The Airbnb clone project showcases my proficiency in full-stack web development, from creating an engaging front-end to managing the back-end and database components. It allows users to search for properties and experience the key functionalities of the Airbnb platform in a seamless and secure manner.
 Deployment
 
-I have deployed my project using render connected with Atls
+I have deployed my project using render connected with Atlas
 Authors
 
     @affancoder
