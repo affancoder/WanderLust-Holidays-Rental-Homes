@@ -1,4 +1,3 @@
-
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   display: flex;
@@ -114,4 +113,36 @@ body {
 #map {
   height: 400px;
   width: 100vh;
+}
+
+@media (max-width: 600px) {
+  HTML,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    offset: none;
+  }
+
+  .container-fluid {
+    background-color: rgb(240, 238, 238);
+    color: white;
+    gap: 16px;
+  }
+
+  #show-body {
+    width: 180% !important;
+    margin-left: -130px;
+  }
+
+  #comments {
+    width: 70% !important;
+  }
+
+  #card-body {
+    width: 70% !important;
+  }
+
+  #map {
+    width: 200px;
+  }
 }
