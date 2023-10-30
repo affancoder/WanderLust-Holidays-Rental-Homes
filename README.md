@@ -1,4 +1,4 @@
-vWanderLust Project
+WanderLust Project
 
 Project Summary:
 
