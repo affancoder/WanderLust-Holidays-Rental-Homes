@@ -143,6 +143,22 @@ body {
   }
 
   #map {
-    width: 200px;
+    width: 240px;
+  }
+
+  #filters {
+    display: flex;
+    overflow-x: scroll !important;
+    align-items: center;
+  }
+
+  .tax-toggle {
+    display: grid !important;
+    margin-right: 30px;
+    height: 1rem;
+  }
+  .tax-toggle label{
+    font-size: 10px;
+    display: none;
   }
 }
