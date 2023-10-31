@@ -4,6 +4,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+Body::-webkit-scrollbar {
+  display: none;
+}
+Body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .container {
   flex: 1;
 }
@@ -157,7 +164,7 @@ body {
     margin-right: 30px;
     height: 1rem;
   }
-  .tax-toggle label{
+  .tax-toggle label {
     font-size: 10px;
     display: none;
   }
