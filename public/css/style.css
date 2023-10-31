@@ -4,6 +4,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+Body::-webkit-scrollbar {
+  display: none;
+}
+Body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .container {
   flex: 1;
 }
@@ -109,6 +116,12 @@ body {
   padding-right: 0;
 }
 
+#lis-tit {
+  margin: 20px 30px 30px 20px;
+  box-sizing: border-box;
+  width: 70%;
+}
+
 /* Map */
 #map {
   height: 400px;
@@ -143,6 +156,22 @@ body {
   }
 
   #map {
-    width: 200px;
+    width: 240px;
+  }
+
+  #filters {
+    display: flex;
+    overflow-x: scroll !important;
+    align-items: center;
+  }
+
+  .tax-toggle {
+    display: grid !important;
+    margin-right: 30px;
+    height: 1rem;
+  }
+  .tax-toggle label {
+    font-size: 10px;
+    display: none;
   }
 }
