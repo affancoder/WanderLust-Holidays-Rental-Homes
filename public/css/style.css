@@ -4,13 +4,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-Body::-webkit-scrollbar {
-  display: none;
-}
-Body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 .container {
   flex: 1;
 }
@@ -150,22 +143,6 @@ Body {
   }
 
   #map {
-    width: 240px;
-  }
-
-  #filters {
-    display: flex;
-    overflow-x: scroll !important;
-    align-items: center;
-  }
-
-  .tax-toggle {
-    display: grid !important;
-    margin-right: 30px;
-    height: 1rem;
-  }
-  .tax-toggle label {
-    font-size: 10px;
-    display: none;
+    width: 200px;
   }
 }
