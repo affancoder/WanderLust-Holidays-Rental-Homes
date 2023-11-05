@@ -7,7 +7,7 @@ body {
 Body::-webkit-scrollbar {
   display: none;
 }
-Body {
+HTML,body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
