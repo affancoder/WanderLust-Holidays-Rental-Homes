@@ -24,13 +24,13 @@ Additional Features:
 1. Implemented a search and filter system for property listings.
 2. Included features for user reviews, ratings, and messaging between users.
 3. Ensured security and data privacy through encryption and data validation.
-4. Deployed the application on a cloud platform on AWS to make it accessible online.
+4. Deployed the web application on a cloud platform on Cloudinary to make it accessible online.
 
 The Airbnb clone project showcases my proficiency in full-stack web development, from creating an engaging front-end to managing the back-end and database components. It allows users to search for properties and experience the key functionalities of the Airbnb platform in a seamless and secure manner.
 
 ## Deployment
 
-I have deployed my project using render connected with Atls
+I have deployed my project using render connected with MongoDB Atlas
 
 
 ## Authors
