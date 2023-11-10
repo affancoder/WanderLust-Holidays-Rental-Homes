@@ -4,10 +4,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-Body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
-Body {
+
+body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -57,6 +58,10 @@ Body {
   cursor: pointer;
   font-size: 1.2rem;
   margin-right: 1rem;
+}
+
+img {
+  border: 3px solid #d0d0d3;
 }
 
 /* cards */
@@ -124,8 +129,10 @@ Body {
 
 /* Map */
 #map {
-  height: 400px;
-  width: 100vh;
+  height: 420px;
+  width: 660px;
+  border: 4px solid #d0d0d3;
+  border-style: ridge;
 }
 
 @media (max-width: 600px) {
@@ -157,8 +164,9 @@ Body {
 
   #map {
     width: 265px;
-    height: 330px;
+    height: 350px;
     border: 4px solid #ebebee;
+    border-style: groove;
   }
 
   #filters {
