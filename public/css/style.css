@@ -122,9 +122,12 @@ img {
 }
 
 #lis-tit {
-  margin: 20px 30px 30px 20px;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  height: 10%;
   box-sizing: border-box;
   width: 70%;
+  text-align: center;
 }
 
 /* Map */
