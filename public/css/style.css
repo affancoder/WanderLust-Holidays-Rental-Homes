@@ -64,6 +64,10 @@ img {
   border: 3px solid #d0d0d3;
 }
 
+#show-body {
+  margin-top: -3rem !important;
+}
+
 /* cards */
 
 .listing-card {
