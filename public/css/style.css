@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Poppins:wght@400;700&display=swap");
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   display: flex;
@@ -76,11 +79,21 @@ img {
   object-fit: cover !important;
 }
 .card-body {
-  padding: 0 !important;
+  padding: 0px !important;
+  margin-left: 10px;
 }
 .card-text p {
   font-weight: 400;
 }
+.card-text {
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+}
+.card-text b {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+}
+
 .listing-link {
   text-decoration: none;
 }
@@ -90,6 +103,10 @@ img {
 .card-img-overlay:hover {
   opacity: 0.2;
   background-color: white;
+}
+
+#comments textarea {
+  width: 650px !important;
 }
 
 .add-btn {
@@ -136,12 +153,22 @@ img {
   text-align: center;
 }
 
+.row .allreview {
+  font-size: 32px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
 /* Map */
 #map {
-  height: 420px;
-  width: 660px;
-  border: 4px solid #d0d0d3;
+  height: 440px;
+  width: 760px;
+  border: 6px solid #d0d0d3;
   border-style: ridge;
+  margin-left: -80px;
+}
+.maph3 {
+  margin-left: -70px;
 }
 
 nav {
@@ -154,6 +181,7 @@ nav {
     width: 100%;
     overflow-x: hidden;
     offset: none;
+    margin-top: 80px;
   }
 
   .container-fluid {
@@ -169,16 +197,24 @@ nav {
     width: 180% !important;
     margin-left: -130px;
   }
-  #lis-tit {
-    margin-top: 220px;
+
+  .show-img {
+    height: 34vh;
+    width: 110% !important;
+    margin-left: -16px !important;
   }
 
-  #comments {
-    width: 70% !important;
+  #comments textarea {
+    width: 265px !important;
+    height: 140px !important;
   }
 
   #card-body {
     width: 65% !important;
+  }
+
+  .card-body {
+    margin-left: 10px;
   }
 
   #map {
@@ -186,13 +222,24 @@ nav {
     height: 350px;
     border: 4px solid #ebebee;
     border-style: groove;
+    margin-left: 6px;
+  }
+
+  .maph3 {
+    margin-left: 10px;
+    margin-bottom: -8px;
+  }
+
+  .alert {
+    padding-right: 3rem;
+    width: 280px !important;
+    margin-left: 30px !important;
   }
 
   #filters {
     display: flex;
     overflow-x: scroll !important;
     align-items: center;
-    margin-top: 60px;
   }
 
   .tax-toggle {
