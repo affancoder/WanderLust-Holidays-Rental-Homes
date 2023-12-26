@@ -152,6 +152,11 @@ img {
     text-align: center;
   }
 
+  .navbar {
+    position: fixed !important;
+    width: 100%;
+  }
+  
   #show-body {
     width: 180% !important;
     margin-left: -130px;
