@@ -181,6 +181,7 @@ img {
     display: flex;
     overflow-x: scroll !important;
     align-items: center;
+    margin-top: 62px;
   }
 
   .tax-toggle {
