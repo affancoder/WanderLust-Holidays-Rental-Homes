@@ -128,7 +128,7 @@ img {
 }
 
 .show-img {
-  height: 62vh;
+  height: 60vh;
   width: 680px !important;
   margin-left: -54px !important;
 }
@@ -173,6 +173,11 @@ img {
 
 nav {
   position: sticky !important;
+}
+
+.responsive {
+  display: none;
+  visibility: hidden;
 }
 
 @media (max-width: 600px) {
@@ -243,12 +248,18 @@ nav {
   }
 
   .tax-toggle {
-    display: grid !important;
-    margin-right: 30px;
-    height: 1rem;
-  }
-  .tax-toggle label {
-    font-size: 10px;
     display: none;
+    visibility: hidden;
+  }
+
+  .responsive {
+    display: flex !important;
+    justify-content: center !important;
+    visibility: unset;
+    margin: 12px 10px 25px 10px;
+    border: 1px solid silver;
+    border-style: ridge;
+    border-radius: 8px;
+    padding: 16px;
   }
 }
