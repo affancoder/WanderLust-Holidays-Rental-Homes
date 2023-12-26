@@ -159,7 +159,9 @@ img {
     position: fixed !important;
     width: 100%;
   }
-  
+  #lis-tit{
+    margin-top: 220px;
+  }
   #show-body {
     width: 180% !important;
     margin-left: -130px;
