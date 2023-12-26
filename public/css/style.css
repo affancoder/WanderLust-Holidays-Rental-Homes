@@ -154,9 +154,14 @@ img {
 }
 
 .row .allreview {
-  font-size: 32px;
+  margin-top: 40px;
+  font-size: 22px;
   margin-left: 10px;
   font-weight: 500;
+}
+
+.hrshow{
+  width: 88%;
 }
 
 /* Map */
@@ -220,6 +225,10 @@ nav {
 
   .card-body {
     margin-left: 10px;
+  }
+
+  .hrshow{
+    width: 70%;
   }
 
   #map {
