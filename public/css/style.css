@@ -297,9 +297,8 @@ footer {
     margin-top: -13px;
   }
 
-  .tax-toggle {
+  #filters .tax-toggle {
     display: none;
-    visibility: hidden;
   }
 
   .responsive {
@@ -337,7 +336,7 @@ footer {
     font-weight: 700;
   }
 
-  .needs-validation {
+  #custom {
     width: 260px !important;
     margin-left: -40px;
   }
