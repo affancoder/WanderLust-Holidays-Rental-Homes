@@ -132,6 +132,12 @@ img {
   width: 680px !important;
   margin-left: -54px !important;
 }
+
+.card-img-overlay {
+  font-size: 26px;
+  color: red;
+}
+
 .btns {
   display: flex;
 }
@@ -160,7 +166,7 @@ img {
   font-weight: 500;
 }
 
-.hrshow{
+.hrshow {
   width: 88%;
 }
 
@@ -227,7 +233,12 @@ nav {
     margin-left: 10px;
   }
 
-  .hrshow{
+  .card-img-overlay {
+    font-size: 16px;
+    color: red;
+  }
+
+  .hrshow {
     width: 70%;
   }
 
@@ -265,10 +276,10 @@ nav {
     display: flex !important;
     justify-content: center !important;
     visibility: unset;
-    margin: 12px 10px 25px 10px;
+    margin: 12px 16px 25px 16px;
     border: 1px solid silver;
     border-style: ridge;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 16px;
   }
 }
