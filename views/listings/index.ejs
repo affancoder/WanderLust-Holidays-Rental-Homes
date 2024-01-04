@@ -1,51 +1,5 @@
 <% layout("/layouts/boilerplate") %>
 
-<style>
-  #filters{
-    display: flex;
-    overflow-x: scroll;
-    align-items: center;
-  }
-  #filters::-webkit-scrollbar {
-  display: none;
-  }
-  #filters {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  }
-
-  .filter{
-    text-align: center;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    opacity: 0.8;
-  }
-  .filter:hover{
-    opacity: 1;
-    cursor: pointer;
-  }
-  .filter p{
-    font-size: 0.8rem;
-  }
-  .tax-info{
-    display: none;
-  }
-  .tax-info2{
-    display: none;
-  }
-
-  .tax-toggle{
-    border: 1px solid black;
-    border-radius: 1rem;
-    height: 3.25rem;
-    padding: 1rem;
-    margin-left: 2rem;
-    display: flex;
-    align-items: center;
-  }
-  
-</style>
-
 <div class="filters-main">
   <div id="filters">
     <div class="filter">  
