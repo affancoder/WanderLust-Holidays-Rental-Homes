@@ -90,10 +90,11 @@ img {
   font-weight: 500;
   /* font-family: "Open Sans", sans-serif; */
   font-family: "Lato", sans-serif;
+  
 }
 .card-text b {
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
 }
 
 .listing-link {
@@ -172,7 +173,7 @@ img {
   width: 88%;
 }
 
-/* Map */
+/* ---------------------Map---------------- */
 #map {
   height: 440px;
   width: 760px;
@@ -188,7 +189,7 @@ nav {
   position: sticky !important;
 }
 
-/* index.ejs */
+/* ------------------index.ejs------------------ */
 
 #filters {
   display: flex;
@@ -237,6 +238,7 @@ nav {
   display: none;
   visibility: hidden;
 }
+/* --------------------footer------------------ */
 
 footer {
   background-color: #ebebee;
