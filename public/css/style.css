@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -29,7 +30,19 @@ body {
 }
 .nav-link {
   color: #222222 !important;
+  cursor: pointer;
 }
+
+#title {
+  color: #fe424d !important;
+  font-size: 1.3rem;
+}
+
+#title:hover {
+  color: black !important;
+  transition: 0.5s;
+}
+
 .f-info-links {
   gap: 10px;
 }
@@ -68,7 +81,7 @@ img {
   border: 3px solid #d0d0d3;
 }
 
-/* cards */
+/* --------------------cards---------------- */
 
 .listing-card {
   border: none !important;
@@ -90,11 +103,10 @@ img {
   font-weight: 500;
   /* font-family: "Open Sans", sans-serif; */
   font-family: "Lato", sans-serif;
-  
 }
 .card-text b {
   font-weight: 600;
-  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Montserrat", sans-serif;
 }
 
 .listing-link {
