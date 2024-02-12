@@ -30,6 +30,12 @@
       <a href="#">Wanderlust.org emergency</a>
     </div>
   </div>
+  <div class="scrollup">
+    <!-- <button>Back to top</button> -->
+    <button onclick="scrollToTop()" class="topfun">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
   <hr style="margin: 30px" />
   <div class="f-info">
     <div class="f-info-socials">
@@ -43,7 +49,7 @@
       <i class="fa-brands fa-pinterest" style="color: brown"></i>
       <i class="fa-brands fa-linkedin" style="color: rgb(6, 101, 123)"></i>
     </div>
-    <div class="f-info-brand">2024 &copy; WanderLust Private Limited, inc.</div>
+    <div class="f-info-brand">&copy; 2024 WanderLust Private Limited, inc.</div>
     <div class="f-info-links">
       <a
         href="
@@ -52,8 +58,18 @@
       >
       <a href="/terms">Terms</a>
       <a href="/sitemap">Sitemap</a>
-      <a href="/companydetails">Company Details</a>
+      <a href="/companydetails">Company details</a>
     </div>
   </div>
   <div style="margin-bottom: 40px"></div>
 </footer>
+
+<script>
+  function scrollToTop() {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: adds smooth scrolling animation
+    });
+  }
+</script>

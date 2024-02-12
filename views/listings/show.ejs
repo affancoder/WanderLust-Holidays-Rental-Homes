@@ -16,7 +16,7 @@
     />
     <div class="card-body">
       <p class="card-text mt-2">
-        Owned by <i><%= listing.owner.username %></i>
+        Hosted by <i><%= listing.owner.username %></i>
       </p>
       <p class="card-text"><b>Description : </b><%= listing.description %></p>
       <p class="card-text">
@@ -126,7 +126,7 @@
             class="starability-result card-text"
             data-rating="<%= review.rating %>"
           ></p>
-          <p class="card-text"><%= review.comment %></p>
+          <p class="card-text mb-4"><%= review.comment %></p>
           <% if(currUser && currUser._id.equals(review.author._id)) {%>
           <form
             class="mb-3"
@@ -142,8 +142,149 @@
     </div>
     <% } %>
   </div>
+
+  <div class="col-8 offset-3 my-5">
+    <hr class="hrshow" />
+    <h4>What this place offers</h4>
+    <div class="offers">
+      <i class="ri-restaurant-line"><span> Kitchen</span></i>
+      <i class="ri-car-fill"><span> Parking</span></i>
+      <i class="ri-t-shirt-air-fill"><span> Air conditioning</span></i>
+      <i class="ri-tv-2-line"><span> TV</span></i>
+      <i class="ri-vidicon-line"><span> Security cameras</span></i>
+      <i class="ri-wifi-line"><span> Wifi</span></i>
+      <i class="ri-steam-fill"><span> Gaming</span></i>
+    </div>
+    <div class="offers">
+      <button
+        id="offers"
+        type="button"
+        class="btn btn-outline-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Show all 50 amenities
+      </button>
+      <!-- Button trigger modal -->
+      <!-- <button
+        id="offers"
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button> -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                What this place offers
+              </h1>
+              <!-- <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button> -->
+            </div>
+            <div class="modal-body">
+              <ul>
+                <h5>Scenic views</h5>
+                <li>Lake view</li>
+                <li>Mountain view</li>
+                <li>Pool view</li>
+                <hr />
+              </ul>
+              <ul>
+                <h5>Bathrooms</h5>
+                <li>Cleaning products</li>
+                <li>Shampoo</li>
+                <li>Hot Water</li>
+                <hr />
+              </ul>
+              <ul>
+                <h5>Bedroom and laundry</h5>
+                <li>Essentials</li>
+                <li>Hangers</li>
+                <li>Bed linen</li>
+                <hr />
+              </ul>
+              <ul>
+                <h5>Entertainment</h5>
+                <li>TV with standard cable/satellite</li>
+                <li>Sound system with Bluetooth and aux</li>
+                <li>Pool table</li>
+                <hr />
+              </ul>
+              <ul>
+                <h5>Outdoor</h5>
+                <li>Patio or balcony</li>
+                <li>Garden</li>
+                <li>Hammock</li>
+                <li>Firpit</li>
+                <li>BBQ grill</li>
+                <hr />
+              </ul>
+              <ul>
+                <h5>Kitchen and dining</h5>
+                <li>Dishes and cutlery</li>
+                <li>Barbecue utensils</li>
+                <li>Dining table</li>
+                <li>Freezer</li>
+                <hr />
+              </ul>
+              <ul>
+                <h5>Locations Features</h5>
+                <li>Waterfront</li>
+                <p>Right next to a body of water</p>
+                <li>Lake access</li>
+                <p>Guests can get to a lake using a path or dock</p>
+                <li>Private entrance</li>
+                <p>Separate street or building entrance</p>
+                <hr />
+              </ul>
+              <ul>
+                <h6>and many more...</h6>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-dark"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <!-- <button type="button" class="btn btn-outline-dark">
+                Save changes
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hrshow" />
+  </div>
+
   <div class="col-8 offset-3 mb-3">
-    <h3 class="maph3">Where you’ll be</h3>
+    <h4 class="maph3">Where you’ll be</h4>
+    <p
+      class="card-text maph3"
+      id="location-p"
+      style="margin-top: 10px; font-weight: 100 !important"
+    >
+      <%= listing.location %>, <%= listing.country %>
+    </p>
     <div style="height: 20px"></div>
     <div id="map"></div>
   </div>
