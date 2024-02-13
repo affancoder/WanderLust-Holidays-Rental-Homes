@@ -286,27 +286,89 @@
 
   <!------------------------- Services start -------------------------------->
 
-  <div class="col-8 offset-3 my-5">
+  <div class="col-8 offset-3 my-5" id="services">
     <h4>Add-on services</h4>
     <p>
       After booking this home, a trip designer can arrange any of these add-on
       services.
     </p>
     <div class="offers">
+      <i class="ri-flight-takeoff-fill"><span> Airport Tranfer</span></i>
       <i class="ri-goblet-line"><span> Butler</span></i>
       <i class="ri-luggage-cart-fill"><span> Pre-stocking</span></i>
-      <i class="ri-flight-takeoff-fill"><span> Airport Tranfer</span></i>
       <i class="ri-hand-sanitizer-fill"><span> Cleaning</span></i>
     </div>
     <p>Not seeing something that you would like to order?</p>
 
     <div class="services-offer">
-      <button>Message a trip designer</button>
+      <!-- Button trigger modal -->
+      <button
+        id="offers"
+        type="button"
+        class="btn btn-outline-danger"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Message a trip designer
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Owned by <%= listing.owner.username %>
+              </h1>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="johnduke19@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Write your requirments below</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <hr class="hrshow" />
   </div>
 
-  <!--------------= services end =---------------------->
+  <!-----------------= services end =------------------->
 
   <!-------------------------- Map Start -------------------------------->
 
@@ -322,6 +384,8 @@
     <div style="height: 20px"></div>
     <div id="map"></div>
   </div>
+
+  <!-------------------- Map End ----------------------->
 </div>
 
 <script src="/js/map.js"></script>

@@ -226,8 +226,8 @@ img {
   padding: 10px 10px;
   font-weight: bold;
   border-radius: 10px;
-  background-color: transparent !important;
-  color: #151515;
+  /* background-color: transparent !important; */
+  /* color: #151515; */
 }
 
 /* ---------------------Map---------------- */
