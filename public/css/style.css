@@ -220,6 +220,16 @@ img {
   color: #151515; */
 }
 
+.services-offer button {
+  height: 50px;
+  width: 240px;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: transparent !important;
+  color: #151515;
+}
+
 /* ---------------------Map---------------- */
 #map {
   height: 440px;

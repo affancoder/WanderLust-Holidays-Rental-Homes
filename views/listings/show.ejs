@@ -21,7 +21,7 @@
       <p class="card-text"><b>Description : </b><%= listing.description %></p>
       <p class="card-text">
         <b>Cost : </b>
-        &#8377; <%= listing.price.toLocaleString("en-IN") %> &nbsp;/night
+        &#8377; <%= listing.price.toLocaleString("en-IN") %> &nbsp;/ night
       </p>
       <p class="card-text"><b>Place : </b><%= listing.location %></p>
       <p class="card-text"><b>Country : </b><%= listing.country %></p>
@@ -41,6 +41,8 @@
     </form>
   </div>
   <% } %>
+
+  <!--------------------------- Review start here ------------------------------->
 
   <div class="col-8 offset-3 mb-3">
     <% if(currUser) { %>
@@ -142,6 +144,10 @@
     </div>
     <% } %>
   </div>
+
+  <!-----------------= review end =------------------->
+
+  <!--------------------------- Offers start --------------------------->
 
   <div class="col-8 offset-3 my-5">
     <hr class="hrshow" />
@@ -275,6 +281,34 @@
     </div>
     <hr class="hrshow" />
   </div>
+
+  <!------------------= Offers end =----------------->
+
+  <!------------------------- Services start -------------------------------->
+
+  <div class="col-8 offset-3 my-5">
+    <h4>Add-on services</h4>
+    <p>
+      After booking this home, a trip designer can arrange any of these add-on
+      services.
+    </p>
+    <div class="offers">
+      <i class="ri-goblet-line"><span> Butler</span></i>
+      <i class="ri-luggage-cart-fill"><span> Pre-stocking</span></i>
+      <i class="ri-flight-takeoff-fill"><span> Airport Tranfer</span></i>
+      <i class="ri-hand-sanitizer-fill"><span> Cleaning</span></i>
+    </div>
+    <p>Not seeing something that you would like to order?</p>
+
+    <div class="services-offer">
+      <button>Message a trip designer</button>
+    </div>
+    <hr class="hrshow" />
+  </div>
+
+  <!--------------= services end =---------------------->
+
+  <!-------------------------- Map Start -------------------------------->
 
   <div class="col-8 offset-3 mb-3">
     <h4 class="maph3">Where you’ll be</h4>
