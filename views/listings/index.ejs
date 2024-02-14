@@ -69,12 +69,12 @@
       />
       </div>
       
-      <!-- &#9829; -->
+      <!-- heart -  &#9829; -->
       <div class="card-img-overlay"><i class="ri-heart-fill"></i></div>
       <div class="card-body">
         <p class="card-text">
-          <b><%= listing.title %> </b><br />
-          &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+          <strong><%= listing.title %></strong><br><span style="color: grey;"><%= listing.country %></span><br />
+          &#8377; <%= listing.price.toLocaleString("en-IN") %> night
           <i class="tax-info">&nbsp;&nbsp;+18% GST</i>
           <i class="tax-info2">&nbsp;&nbsp;+18% GST</i>
         </p>

@@ -55,7 +55,7 @@
       class="needs-validation"
     >
       <div class="mb-3 mt-3">
-        <label for="rating" class="form-label">Rating</label>
+        <label for="rating" class="form-label"><i id="rating">Rating</i></label>
         <fieldset class="starability-slot">
           <input
             type="radio"
@@ -115,8 +115,9 @@
         ></textarea>
         <div class="invalid-feedback">Please add some comments for review</div>
       </div>
-      <button class="btn btn-outline-success">Submit</button>
+      <button class="btn btn-success">Submit</button>
     </form>
+
     <% } %> <% if(listing.reviews.length > 0) { %>
     <div class="row">
       <p class="allreview">All Reviews</p>
