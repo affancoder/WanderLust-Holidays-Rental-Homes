@@ -39,13 +39,13 @@
       <p>Arctic</p>
     </div>
     
-  
     <div class="tax-toggle">
       <div class="form-check-reverse form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">    
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="cursor: pointer;">    
         <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -73,10 +73,12 @@
       <div class="card-img-overlay"><i class="ri-heart-fill"></i></div>
       <div class="card-body">
         <p class="card-text">
-          <strong><%= listing.title %></strong><br><span style="color: grey;"><%= listing.country %></span><br />
-          &#8377; <%= listing.price.toLocaleString("en-IN") %> night
-          <i class="tax-info">&nbsp;&nbsp;+18% GST</i>
-          <i class="tax-info2">&nbsp;&nbsp;+18% GST</i>
+
+          <strong><%= listing.title %></strong><br><span style="color: grey;"><%= listing.country %></span>
+          <div class="price" style="margin-top: -12px;">&#8377; <%= listing.price.toLocaleString("en-IN") %> night<br></div>
+          <span class="tax-info" style="text-decoration: underline;">&#8377; <%= (listing.price*1.8).toLocaleString("en-IN") %> &nbsp;after adding taxes</span>
+          <i class="tax-info2" style="text-decoration: underline;">&#8377; <%= (listing.price*1.8).toLocaleString("en-IN") %> &nbsp;after adding taxes</i>
+
         </p>
       </div>
     </div>
