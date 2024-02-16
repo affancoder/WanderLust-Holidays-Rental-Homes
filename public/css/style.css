@@ -236,12 +236,12 @@ textarea {
 
 /* --------------------- Map ------------------- */
 #map {
-  height: 440px;
+  height: 460px;
   /* width: 760px; */
-  width: 115%;
+  width: 130%;
   border: 5px solid #d0d0d3;
   border-style: ridge;
-  margin-left: -100px;
+  margin-left: -27%;
 }
 .maph3 {
   margin-left: -70px;
@@ -254,6 +254,70 @@ nav {
 
 #location p {
   margin-left: -70px;
+}
+
+/*------------------- hosted ---------------------*/
+
+#hosted {
+  padding: 30px;
+}
+
+.hosted {
+  display: flex;
+  justify-content: center;
+}
+
+.hosted i {
+  font-size: 2rem;
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hosted p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.hosted-details p {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.hosted-details span {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 1rem;
+}
+
+#host-description {
+  padding: 0px 30%;
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+}
+
+#response-rt p {
+  color: slategrey;
+  margin: 20px;
+  font-size: 16px;
+}
+
+.hosted-details button {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
 }
 
 /* ------------------ index.ejs ------------------ */
@@ -475,6 +539,12 @@ footer {
     border-radius: 16px;
     padding: 16px;
   }
+
+  #host-description {
+    padding: 0px 19%;
+  }
+
+  /*--------------------- footer -----------------*/
 
   .footer {
     display: grid;

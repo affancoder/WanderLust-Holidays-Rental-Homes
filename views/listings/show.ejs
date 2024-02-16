@@ -387,6 +387,32 @@
   </div>
 
   <!-------------------- Map End ----------------------->
+
+  <!-------------------- hosted start ---------------------->
+
+  <div id="hosted">
+    <div class="hosted">
+      <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="hosted-details">
+      <p>Hosted by <%= listing.owner.username %></p>
+      <p>Email : <%= listing.owner.email %></p>
+      <p id="host-description">
+        Superhosts are experienced, highly rated hosts who are committed to
+        providing great stays for guests.
+      </p>
+      <div id="response-rt">
+        <p>Response rate : 100%</p>
+        <p style="margin-top: -14px">Response time : within an hour</p>
+      </div>
+      <span
+        ><i class="ri-verified-badge-line">Identity Verified</i>
+        <i class="ri-medal-line">Superhost</i></span
+      >
+      <button class="mx-auto btn btn-warning">Contact host</button>
+    </div>
+  </div>
+  <!-------------------- hosted end ---------------------->
 </div>
 
 <script src="/js/map.js"></script>
