@@ -20,6 +20,32 @@
     padding: 0.5rem 3rem 0.5rem 3rem;
     font-size: 0.9rem;
   }
+
+  #responsive-registration {
+    display: none;
+  }
+
+  .dropdown button {
+    margin-left: 120px;
+    width: 80px;
+    height: 44px;
+    border-radius: 22px;
+  }
+
+  .dropdown-menu {
+    width: 200px;
+    padding: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .dropdown {
+      display: none;
+    }
+
+    #responsive-registration {
+      display: inline;
+    }
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -62,22 +88,11 @@
           </button>
         </form>
       </div>
-      <!-- <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2 search-inp"
-            type="search"
-            placeholder="Search destinations"
-          />
-          <button class="btn search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>Search
-          </button>
-        </form>
-      </div> -->
+
       <div class="navbar-nav ms-auto">
-        <!-- <div class="dropdown">
+        <div class="dropdown">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            class="btn btn-success dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -85,21 +100,31 @@
             <i class="fa-solid fa-circle-user"></i>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <% if(!currUser) { %>
+            <a class="nav-link" href="/signup"><b>Sign up</b></a>
+            <a class="nav-link" href="/login"><b>Log in</b></a>
+            <% } %> <% if(currUser) { %>
+            <a class="nav-link" href="/logout"><b>Log out</b></a>
+            <% } %>
+            <hr />
+            <a class="nav-link" href="/listings/new"
+              ><strong>Add new home</strong></a
+            >
+            <a class="nav-link">Help Centre</a>
           </ul>
-        </div> -->
+        </div>
 
-        <a class="nav-link" href="/listings/new"
-          ><strong>Add new home</strong></a
-        >
-        <% if(!currUser) { %>
-        <a class="nav-link" href="/signup"><b>Sign up</b></a>
-        <a class="nav-link" href="/login"><b>Log in</b></a>
-        <% } %> <% if(currUser) { %>
-        <a class="nav-link" href="/logout"><b>Log out</b></a>
-        <% } %>
+        <div id="responsive-registration">
+          <a class="nav-link" href="/listings/new"
+            ><strong>Add new home</strong></a
+          >
+          <% if(!currUser) { %>
+          <a class="nav-link" href="/signup"><b>Sign up</b></a>
+          <a class="nav-link" href="/login"><b>Log in</b></a>
+          <% } %> <% if(currUser) { %>
+          <a class="nav-link" href="/logout"><b>Log out</b></a>
+          <% } %>
+        </div>
       </div>
     </div>
   </div>

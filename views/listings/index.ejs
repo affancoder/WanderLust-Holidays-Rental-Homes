@@ -2,41 +2,76 @@
 
 <div class="filters-main">
   <div id="filters">
-    <div class="filter">  
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p>Trending</p>
+    <div class="filter-width">
+      <div class="filter">  
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-solid fa-person-shelter"></i></i></div>
+        <p>Rooms</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
+        <p>Castle</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountains</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-solid fa-tents"></i></div>
+        <p>Camping</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amazing pools</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic cities</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-solid fa-cow"></i></div>
+        <p>Farms</p>
+      </div>
+      <div class="filter">
+        <div><i class="fa-regular fa-snowflake"></i></div>
+        <p>Arctic</p>
+      </div>
     </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-person-shelter"></i></i></div>
-      <p>Rooms</p>
+
+    <div class="filter-box">
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="ri-equalizer-line">&nbsp;Filters</i>
+      </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Filters</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Type of place</h5>
+        <p>Search rooms, entire homes or any type of place.</p>
+        <span id="anytype-btn"><button>Any type</button><button>Room</button><button>Entire home</button></span>
+        <hr>
+        <h5>Price range</h5>
+        <p>Nightly prices before fees and taxes</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Show 650 Places</button>
+      </div>
     </div>
-    <div class="filter">
-      <div><i class="fa-brands fa-fort-awesome"></i></div>
-      <p>Castle</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain"></i></div>
-      <p>Mountains</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-tents"></i></div>
-      <p>Camping</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing pools</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p>Iconic cities</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-cow"></i></div>
-      <p>Farms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-regular fa-snowflake"></i></div>
-      <p>Arctic</p>
+  </div>
+</div>
+
     </div>
     
     <div class="tax-toggle">
@@ -95,6 +130,7 @@
       if(info.style.display != "inline") {
         info.style.display = "inline";
         info.style.fontWeight = "bold";
+        info.style.color = "crimson";
       } else {
         info.style.display = "none";
       }

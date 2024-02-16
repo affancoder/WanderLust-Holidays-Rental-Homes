@@ -256,7 +256,7 @@ nav {
   margin-left: -70px;
 }
 
-/*------------------- hosted ---------------------*/
+/*------------------- Hosted by ---------------------*/
 
 #hosted {
   padding: 30px;
@@ -353,6 +353,33 @@ nav {
 }
 .tax-info2 {
   display: none;
+}
+
+.filter-width {
+  display: flex;
+  width: 65%;
+}
+
+.filter-box button {
+  height: 52px;
+  border-radius: 14px;
+  /* margin-left: 10px; */
+}
+
+#anytype-btn {
+  padding: 20px;
+}
+
+#anytype-btn button {
+  background-color: white;
+  width: 140px;
+  border: 1px solid #d0d0d3;
+}
+
+#anytype-btn button:hover {
+  background-color: #151515;
+  color: white;
+  transition: all 0.5s;
 }
 
 .tax-toggle {
@@ -523,6 +550,10 @@ footer {
     align-items: center;
     margin-bottom: -16px;
     margin-top: -13px;
+  }
+
+  .filter-box {
+    display: none;
   }
 
   #filters .tax-toggle {
