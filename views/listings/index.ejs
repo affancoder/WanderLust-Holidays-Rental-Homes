@@ -43,35 +43,174 @@
 
     <div class="filter-box">
 
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class="ri-equalizer-line">&nbsp;Filters</i>
-      </button>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <i class="ri-equalizer-line">&nbsp;Filters</i>
+    </button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Filters</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h5>Type of place</h5>
-        <p>Search rooms, entire homes or any type of place.</p>
-        <span id="anytype-btn"><button>Any type</button><button>Room</button><button>Entire home</button></span>
-        <hr>
-        <h5>Price range</h5>
-        <p>Nightly prices before fees and taxes</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Show 650 Places</button>
-      </div>
-    </div>
-  </div>
-</div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Filters</b></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        <div class="modal-body">
 
+          <h5>Type of place</h5>
+          <p>Search rooms, entire homes or any type of place.</p>
+          <span id="anytype-btn"><button>Any type</button><button>Room</button><button>Entire home</button></span>
+          <hr>
+          <h5>Price range</h5>
+          <p>Nightly prices before fees and taxes</p>
+          <img src="/images/rangebar.jpg" alt="" width="100%" height="100px">
+          <div class="container overflow-hidden text-center">
+            <div class="row gx-5">
+              <div class="col">
+               <div class="p-3"><button id="min-btn">Minimum<p>&#8377;&nbsp;830</p></button></div>
+              </div>
+              <div class="col">
+                <div class="p-3"><button id="min-btn">Maximum<p>&#8377;&nbsp;10000+</p></button></div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h5>Rooms and beds</h5>
+          <p>Bedrooms</p>
+          <div class="bedrooms">
+            <p class="btn btn-dark">Any</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6+</p>
+          </div>
+          <p>Beds</p>
+          <div class="bedrooms">
+            <p class="btn btn-dark">Any</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6+</p>
+          </div>
+          <p>Bathrooms</p>
+          <div class="bedrooms">
+            <p class="btn btn-dark">Any</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6+</p>
+          </div>
+          <hr>
+          <h5><strong>Top-tier stays</strong></h5>
+          <div id="top-tier">
+            <i class="fa-solid fa-award"></i>
+            <p><b>Guest favourites</b></p>
+            <p id="top-tier-p">The most loved homes on Wanderlust, according to guests</p>
+          </div>
+          <hr>
+          <h5><strong>Property type</strong></h5>
+          <div class="property">
+
+            <div class="property-type">
+              <i class="fa-solid fa-house"></i>
+              <p>House</p>
+            </div>
+            <div class="property-type">
+              <i class="fa-solid fa-building-flag"></i>
+              <p>Flat</p>
+            </div>
+            <div class="property-type">
+              <i class="fa-solid fa-house-chimney-window"></i>
+              <p>Guests house</p>
+            </div>
+            <div class="property-type">
+              <i class="fa-solid fa-building"></i>
+              <p>Hotel</p>
+            </div>
+          </div>
+          <hr>
+          <h5><strong>Amentities</strong></h5>
+          <p><b>Essentials</b></p>
+          <div class="amentities">
+          
+            <div class="amentities-item">
+            <p><input type="checkbox">&nbsp;&nbsp;Wifi</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Washing machine</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Air conditioning</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Dedicated workspace</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Hair dryer</p>
+            </div>
+            <div class="amentities-item">
+              <p><input type="checkbox">&nbsp;&nbsp;Kitchen</p>
+              <p><input type="checkbox">&nbsp;&nbsp;Dryer</p>
+              <p><input type="checkbox">&nbsp;&nbsp;Heating</p>
+              <p><input type="checkbox">&nbsp;&nbsp;TV</p>
+              <p><input type="checkbox">&nbsp;&nbsp;Iron</p>
+            </div>
+          </div>
+
+          <p><b>Features</b></p>
+          <div class="amentities">
+          
+            <div class="amentities-item">
+            <p><input type="checkbox">&nbsp;&nbsp;Pool</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Free Parking</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Cot</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Gym</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Breakfast</p>
+            </div>
+            <div class="amentities-item">
+              <p><input type="checkbox">&nbsp;&nbsp;Hot tub</p>
+              <p><input type="checkbox">&nbsp;&nbsp;EV charger</p>
+              <p><input type="checkbox">&nbsp;&nbsp;King ded</p>
+              <p><input type="checkbox">&nbsp;&nbsp;BBQ grill</p>
+              <p><input type="checkbox">&nbsp;&nbsp;fireplace</p>
+            </div>
+          </div>
+
+          <p><b>Features</b></p>
+          <div class="amentities">
+          
+            <div class="amentities-item">
+            <p><input type="checkbox">&nbsp;&nbsp;Pool</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Free Parking</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Cot</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Gym</p>
+            <p><input type="checkbox">&nbsp;&nbsp;Breakfast</p>
+            </div>
+            <div class="amentities-item">
+              <p><input type="checkbox">&nbsp;&nbsp;Hot tub</p>
+              <p><input type="checkbox">&nbsp;&nbsp;EV charger</p>
+              <p><input type="checkbox">&nbsp;&nbsp;King ded</p>
+              <p><input type="checkbox">&nbsp;&nbsp;BBQ grill</p>
+              <p><input type="checkbox">&nbsp;&nbsp;fireplace</p>
+            </div>
+            
+          </div><p><b>Locations</b></p>
+          <div class="amentities">
+            <div class="amentities-item">
+            <p><input type="checkbox">&nbsp;&nbsp;Beachfront</p>
+            </div>
+            <div class="amentities-item">
+              <p><input type="checkbox">&nbsp;&nbsp;Waterfront</p>
+            </div>
+          </div>
+
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Clear</button>
+            <button type="button" class="btn btn-success">Show 650 Places</button>
+          </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="tax-toggle">
@@ -146,6 +285,7 @@
       if(info.style.display != "inline") {
         info.style.display = "inline";
         info.style.fontWeight = "bold";
+        ino.style.color = "crimson";
       } else {
         info.style.display = "none";
       }

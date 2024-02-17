@@ -355,33 +355,6 @@ nav {
   display: none;
 }
 
-.filter-width {
-  display: flex;
-  width: 65%;
-}
-
-.filter-box button {
-  height: 52px;
-  border-radius: 14px;
-  /* margin-left: 10px; */
-}
-
-#anytype-btn {
-  padding: 20px;
-}
-
-#anytype-btn button {
-  background-color: white;
-  width: 140px;
-  border: 1px solid #d0d0d3;
-}
-
-#anytype-btn button:hover {
-  background-color: #151515;
-  color: white;
-  transition: all 0.5s;
-}
-
 .tax-toggle {
   border: 1px solid black;
   border-radius: 1rem;
@@ -395,6 +368,116 @@ nav {
 .responsive {
   display: none;
   visibility: hidden;
+}
+
+/*---------------------- Box Filter --------------*/
+
+.filter-width {
+  display: flex;
+  width: 65%;
+}
+
+.filter-box button {
+  height: 52px;
+  border-radius: 14px;
+}
+
+#anytype-btn {
+  padding: 10px;
+}
+
+#anytype-btn button {
+  font-weight: 600;
+  background-color: white;
+  width: 130px;
+  border: 1px solid #d0d0d3;
+}
+
+#anytype-btn button:hover {
+  background-color: #151515;
+  color: white;
+  transition: all 0.5s;
+}
+
+#min-btn {
+  width: 140px;
+  background-color: white;
+}
+
+.bedrooms {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bedrooms p {
+  border: 1px solid #d0d0d3;
+  height: 50px;
+  width: 50px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bedrooms p:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#top-tier i {
+  font-size: 2rem;
+  margin-left: 6px;
+}
+
+#top-tier {
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 20px;
+  width: 65%;
+  height: auto;
+}
+
+#top-tier-p {
+  margin-top: -14px;
+  font-weight: 500;
+  color: grey;
+}
+
+.property {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-type {
+  border: 1px solid #d0d0d3;
+  border-radius: 12px;
+  height: 100px;
+  width: 130px;
+  margin: 8px;
+}
+
+.property-type:hover {
+  border: 2px solid black;
+  border-style: ridge;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.property-type i {
+  margin: 8px;
+  margin-left: 10px;
+}
+
+.property-type p {
+  margin-left: 10px;
+}
+
+.amentities {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /*-------------------- show.ejs ------------------*/
