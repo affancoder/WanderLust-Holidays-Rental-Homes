@@ -635,8 +635,12 @@ footer {
     margin-top: -13px;
   }
 
+  /* .filter-width{
+    width: 160%;
+  } */
+
   .filter-box {
-    display: none;
+    margin-left: 460px;
   }
 
   #filters .tax-toggle {
