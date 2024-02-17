@@ -383,7 +383,7 @@ nav {
 }
 
 #anytype-btn {
-  padding: 10px;
+  margin: 26px;
 }
 
 #anytype-btn button {
@@ -645,6 +645,16 @@ footer {
 
   #filters .tax-toggle {
     display: none;
+  }
+
+  #anytype-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  #anytype-btn button {
+    width: 84px;
+    height: 80px;
   }
 
   .responsive {
