@@ -541,6 +541,13 @@ footer {
   align-items: center;
   gap: 150px;
 }
+
+.lang-inr img {
+  width: 30px;
+  border: none;
+  margin-top: -6px;
+}
+
 /* ------------------------ Responsive -------------- */
 
 @media (max-width: 600px) {
@@ -561,6 +568,12 @@ footer {
     position: fixed !important;
     width: 100%;
   }
+
+  #account {
+    margin-left: -40px;
+    font-weight: 500;
+  }
+
   #show-body {
     width: 180% !important;
     margin-left: -130px;
