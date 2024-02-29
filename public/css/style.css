@@ -533,8 +533,15 @@ footer {
 }
 
 .f-info-links a {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
+.lang-inr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+}
+/* ------------------------ Responsive -------------- */
 
 @media (max-width: 600px) {
   HTML,
@@ -678,7 +685,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 30px;
-    gap: 36px;
+    /* gap: 36px; */
   }
 
   .footer-item hr {
@@ -701,5 +708,11 @@ footer {
   #custom {
     width: 260px !important;
     margin-left: -40px;
+  }
+  .lang-inr {
+    display: none;
+  }
+  #tonone {
+    display: none;
   }
 }
