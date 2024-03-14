@@ -322,6 +322,16 @@ nav {
 
 /* ------------------ index.ejs ------------------ */
 
+.form-control:focus {
+  color: #ee3c45 !important;
+  background-color: aliceblue;
+  font-weight: bold;
+}
+
+.search-inp {
+  width: 360px !important;
+}
+
 #filters {
   display: flex;
   overflow-x: scroll;
@@ -567,6 +577,10 @@ footer {
   .navbar {
     position: fixed !important;
     width: 100%;
+  }
+
+  .search-inp {
+    width: 230px !important;
   }
 
   #account {
