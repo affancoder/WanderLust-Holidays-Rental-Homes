@@ -742,4 +742,7 @@ footer {
   #tonone {
     display: none;
   }
+  #third-fr {
+    margin-top: 26px;
+  }
 }
