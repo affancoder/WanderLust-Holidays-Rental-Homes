@@ -306,7 +306,7 @@
       <button
         id="offers"
         type="button"
-        class="btn btn-outline-danger"
+        class="btn btn-outline-dark"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
@@ -374,7 +374,10 @@
   <!-------------------------- Map Start -------------------------------->
 
   <div class="col-8 offset-3 mb-3">
-    <h4 class="maph3">Where you’ll be</h4>
+    <h4 class="maph3">
+      <i class="fa-solid fa-compass fa-spin fa-sm" style="color: #ff0000"></i
+      >&nbsp;Where you’ll be
+    </h4>
     <p
       class="card-text maph3"
       id="location-p"
@@ -409,13 +412,86 @@
         ><i class="ri-verified-badge-line">Identity Verified</i>
         <i class="ri-medal-line">Superhost</i></span
       >
-      <button class="mx-auto btn btn-outline-dark">
+      <!-- <button class="mx-auto btn btn-outline-dark">
         <a href="https://www.mail.google.com/"></a>Contact host
-      </button>
+      </button> -->
+
+      <div class="services-offer">
+        <!-- Button trigger modal -->
+        <button
+          id="offers"
+          type="button"
+          class="btn btn-outline-dark mx-auto"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Contact Host
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Owned by <%= listing.owner.username %>
+                </h1>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="johnduke19@example.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Write your requirments below</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-bs-dismiss="modal"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- <hr /> -->
+  <hr />
   <!-------------------- hosted end ---------------------->
+
+  <!-- <div>
+    <h4 class="text-center">Booking House</h4>
+    <div style="margin: 30px">
+      <button class="btn btn-success" type="button">Book</button>
+    </div>
+  </div> -->
 </div>
 
 <script src="/js/map.js"></script>
