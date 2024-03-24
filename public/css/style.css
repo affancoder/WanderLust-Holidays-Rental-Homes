@@ -196,7 +196,7 @@ textarea {
   font-weight: 550;
 }
 
-/* -------------- What this place Offer ------------- */
+/* -------------- What this place Offer (show.ejs) ------------- */
 
 .offers {
   padding: 20px;
@@ -235,6 +235,7 @@ textarea {
 }
 
 /* --------------------- Map ------------------- */
+
 #map {
   height: 460px;
   /* width: 760px; */
@@ -256,7 +257,7 @@ nav {
   margin-left: -70px;
 }
 
-/*------------------- Hosted by ---------------------*/
+/*------------------- Hosted by (show.ejs) ---------------------*/
 
 #hosted {
   padding: 30px;
@@ -320,11 +321,11 @@ nav {
   font-weight: 500;
 }
 
-/* ------------------ index.ejs ------------------ */
+/* ------------------ index.ejs (Home page) ------------------ */
 
 .form-control:focus {
-  color: #ee3c45 !important;
-  background-color: aliceblue;
+  /* color: #ee3c45 !important; */
+  /* background-color: aliceblue; */
   font-weight: bold;
 }
 
@@ -380,16 +381,41 @@ nav {
   visibility: hidden;
 }
 
-/*---------------------- Box Filter --------------*/
+/* -------------------- Box Filter (index.ejs) ----------------- */
 
+#filters {
+  display: flex;
+  justify-content: space-around;
+  /* margin: 30px; */
+}
 .filter-width {
   display: flex;
-  width: 65%;
+  width: 60%;
+  overflow-x: scroll;
 }
-
 .filter-box button {
   height: 52px;
   border-radius: 14px;
+}
+
+.price-range {
+  display: flex;
+  align-items: flex-end;
+  height: 120px;
+  width: 400px; /* Adjust width as needed */
+  background-color: white;
+  margin: 50px auto;
+}
+
+.bar {
+  width: 40px;
+  background-color: #007bff;
+  margin: 0 1px; /* Adjust margin as needed */
+  transition: height 0.5s ease;
+}
+
+.bar:hover {
+  background-color: #0056b3;
 }
 
 #anytype-btn {
@@ -490,7 +516,7 @@ nav {
   grid-template-columns: 1fr 1fr;
 }
 
-/*-------------------- show.ejs ------------------*/
+/*-------------------- Show.ejs ------------------*/
 
 #card-body {
   border: 1px solid #d0d0d3;
@@ -561,9 +587,9 @@ footer {
 /* ------------------------ Responsive -------------- */
 
 @media (max-width: 1150px) {
-  .filter-box {
+  /* .filter-box {
     display: none;
-  }
+  } */
   .responsive {
     display: flex !important;
     justify-content: center !important;
@@ -599,7 +625,7 @@ footer {
   }
 
   .search-inp {
-    width: 230px !important;
+    width: 210px !important;
   }
 
   #account {
@@ -640,6 +666,10 @@ footer {
 
   .hrshow {
     width: 70%;
+  }
+
+  .price-range {
+    width: 100%;
   }
 
   /* ---------------- Offer ---------------- */
@@ -692,9 +722,9 @@ footer {
     width: 160%;
   } */
 
-  .filter-box {
+  /* .filter-box {
     margin-left: 480px;
-  }
+  } */
 
   #filters .tax-toggle {
     display: none;
@@ -725,7 +755,7 @@ footer {
     padding: 0px 19%;
   }
 
-  /*--------------------- footer -----------------*/
+  /*--------------------- Footer Responsive -----------------*/
 
   .footer {
     display: grid;
