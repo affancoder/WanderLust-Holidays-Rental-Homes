@@ -24,6 +24,9 @@
         <b>Cost : </b>
         &#8377; <%= listing.price.toLocaleString("en-IN") %> &nbsp;/ night
       </p>
+      <p class="card-text">
+        <b>Category :</b> <%= listing.category.slice(",").join(", ") %>
+      </p>
       <p class="card-text"><b>Place : </b><%= listing.location %></p>
       <p class="card-text"><b>Country : </b><%= listing.country %></p>
     </div>

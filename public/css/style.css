@@ -393,6 +393,12 @@ nav {
   width: 60%;
   overflow-x: scroll;
 }
+
+.filter-width a{
+  text-decoration: none;
+  color: #222222;
+}
+
 .filter-box button {
   height: 52px;
   border-radius: 14px;

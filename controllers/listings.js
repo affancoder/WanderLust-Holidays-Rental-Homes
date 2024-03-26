@@ -104,15 +104,22 @@ module.exports.updateListing = async (req, res) => {
 //   res.redirect(`/listings/${id}`);
 // };
 
-module.exports.destroyListing = async (req, res) => {
+// --- Display listings by category ---
+
+module.exports.filter = async (req, res, next) => {
   let { id } = req.params;
-  let deletedListing = await Listing.findByIdAndDelete(id);
-  console.log(deletedListing);
-  req.flash("success", "Listing Deleted!");
-  res.redirect("/listings");
+  let allListings = await Listing.find({ category: { $all: [id] } });
+  console.log(allListings);
+  if (allListings.length != 0) {
+    res.locals.success = `Listings Find by ${id}`;
+    res.render("listings/index.ejs", { allListings });
+  } else {
+    req.flash("error", "Listings is not here !!!");
+    res.redirect("/listings");
+  }
 };
 
-//search ---
+// --- Search ---
 
 module.exports.search = async (req, res) => {
   console.log(req.query.q);
@@ -135,7 +142,6 @@ module.exports.search = async (req, res) => {
     flag = data[index] == " ";
   }
   console.log(element);
-  // baki sab sahi ho gya ok done bye bye ok
   let allListings = await Listing.find({
     title: { $regex: element, $options: "i" },
   });
@@ -183,4 +189,12 @@ module.exports.search = async (req, res) => {
     req.flash("error", "Listings is not here !!!");
     res.redirect("/listings");
   }
+};
+
+module.exports.destroyListing = async (req, res) => {
+  let { id } = req.params;
+  let deletedListing = await Listing.findByIdAndDelete(id);
+  console.log(deletedListing);
+  req.flash("success", "Listing Deleted!");
+  res.redirect("/listings");
 };

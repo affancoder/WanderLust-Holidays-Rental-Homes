@@ -45,6 +45,46 @@
         <input name="listing[image]" type="file" class="form-control" />
       </div>
 
+      <% for(categ of listing.category){ %>
+      <p><%= categ %>&nbsp;&nbsp;</p>
+      <% } %>
+
+      <!-- Category Selection -->
+      <div class="mb-3">
+        <label for="category" class="form-label">Select Category</label>
+
+        <select
+          id="category"
+          name="listing[category]"
+          class="form-select border border-black border-opacity-50 mb-2"
+          multiple
+          style="font-size: 0.95rem"
+        >
+          <option value="Beachfront">Beachfront</option>
+          <option value="Cabins">Cabins</option>
+          <option value="Omg">OMG</option>
+          <option value="Lake">Lake</option>
+          <option value="Design">Design</option>
+          <option value="Amazing Pools">Amazing pools</option>
+          <option value="Farms">Farms</option>
+          <option value="Amazing Views">Amazing views</option>
+          <option value="Rooms">Rooms</option>
+          <option value="Lakefront">Lakefront</option>
+          <option value="Tiny Homes">Tiny homes</option>
+          <option value="Countryside">Countryside</option>
+          <option value="Treehouse">Treehouse</option>
+          <option value="Trending">Trending</option>
+          <option value="Tropical">Tropical</option>
+          <option value="National Parks">National parks</option>
+          <option value="Casties">Casties</option>
+          <option value="Camping">Camping</option>
+          <option value="Top Of The World">Top of the world</option>
+          <option value="Luxe">Luxe</option>
+          <option value="Iconic Cities">Iconic cities</option>
+          <option value="Earth Homes">Earth homes</option>
+        </select>
+      </div>
+
       <div class="row">
         <div class="mb-3 col-md-4">
           <lable for="price" class="form-label">Price</lable>
