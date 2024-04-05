@@ -128,7 +128,10 @@
       <% for(review of listing.reviews) { %>
       <div class="card col-5 ms-3 mb-2" id="card-body">
         <div class="card-body">
-          <h5 class="card-title mt-2">@<%= review.author.username %></h5>
+          <h5 class="card-title mt-2">
+            <i class="fa-solid fa-circle-user fa-lg" style="color: #ff0000;">&nbsp;</i><%=
+            review.author.username %>
+          </h5>
           <p
             class="starability-result card-text"
             data-rating="<%= review.rating %>"
