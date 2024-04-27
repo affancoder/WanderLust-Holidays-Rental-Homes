@@ -26,7 +26,7 @@ const dbUrl = process.env.ATLASDB_URL;
 
 main()
   .then(() => {
-    console.log("connected to db");
+    console.log("Connected to MongoDB Atlas");
   })
   .catch((err) => {
     console.log(err);
@@ -108,5 +108,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(8080, () => {
-  console.log("Server is listening to port 8080");
+  console.log(`Server is listening to port 8080`);
 });

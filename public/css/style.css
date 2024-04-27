@@ -784,6 +784,17 @@ footer {
     padding: 0px 19%;
   }
 
+  /* ------------------- login -------------------- */
+
+  #account{
+    width: 170%;
+  }
+
+  .googleoauth button{
+    width: 170%;
+    margin-left: -40px;
+  }
+
   /*--------------------- Footer Responsive -----------------*/
 
   .footer {
