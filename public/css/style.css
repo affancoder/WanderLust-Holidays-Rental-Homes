@@ -344,7 +344,7 @@ nav {
   font-weight: 500;
 }
 
-/* ------------------ index.ejs (Home page) ------------------ */
+/* ------------------ index.ejs (Home Page) ------------------ */
 
 .form-control:focus {
   /* color: #ee3c45 !important; */
@@ -550,6 +550,15 @@ nav {
 #card-body {
   border: 1px solid #d0d0d3;
   background-color: #ede9e955;
+}
+
+.btn-review{
+  display: flex !important;
+  /* justify-content: center !important; */
+}
+.btn-review button{
+  margin: 8px;
+  width: 72px;
 }
 
 /* -------------------- Footer ------------------ */

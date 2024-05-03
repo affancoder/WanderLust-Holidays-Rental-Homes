@@ -137,14 +137,19 @@
             data-rating="<%= review.rating %>"
           ></p>
           <p class="card-text mb-4"><%= review.comment %></p>
-          <% if(currUser && currUser._id.equals(review.author._id)) {%>
-          <form
-            class="mb-3"
-            method="POST"
-            action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
-          >
-            <button class="btn btn-sm btn-danger">Delete</button>
-          </form>
+          <% if(currUser && currUser._id.equals(review.author._id)) { %>
+          <div class="btn-review">
+            <form>
+              <button class="btn btn-sm btn-success">Edit</button>
+            </form>
+            <form
+              class="mb-3"
+              method="POST"
+              action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+            >
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </form>
+          </div>
           <% } %>
         </div>
       </div>
