@@ -554,11 +554,15 @@ nav {
 
 .btn-review{
   display: flex !important;
-  /* justify-content: center !important; */
 }
 .btn-review button{
-  margin: 8px;
-  width: 72px;
+  margin: 6px;
+  width: 70px;
+}
+
+.btn-review button a{
+  text-decoration: none;
+  color: white;
 }
 
 /* -------------------- Footer ------------------ */

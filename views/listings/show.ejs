@@ -139,8 +139,9 @@
           <p class="card-text mb-4"><%= review.comment %></p>
           <% if(currUser && currUser._id.equals(review.author._id)) { %>
           <div class="btn-review">
-            <form>
-              <button class="btn btn-sm btn-success">Edit</button>
+            <form method="POST"
+            action="/listings/<%= listing._id %>/reviews/<%= review._id %>/_method=PATCH">
+              <button class="btn btn-sm btn-success"><a href="/listings/<%= review._id %>/reviewedit">Edit</a></button>
             </form>
             <form
               class="mb-3"

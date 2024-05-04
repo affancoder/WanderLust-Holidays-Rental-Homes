@@ -16,12 +16,14 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const googleRoute = require("./routes/google.js");
+const twitterRoute = require("./routes/twitter.js");
+const githubRoute = require("./routes/github.js");
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const { isLoggedIn, validateReview } = require("./middleware.js");
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLASDB_URL;
 
 main()
@@ -81,10 +83,24 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// --- Review Edit Route button ---
+
+app.get("/listings/:id/reviewedit",(req,res) => {
+  res.send("<h2>Bro you can simply delete and add a new review!</h2>");
+  // res.render("/reviewedit");
+});
+
 // --- Google oauth ---
 
 app.use("/auth/google", googleRoute);
 
+// -- Twitter auth ---
+
+app.use("/auth/twitter", twitterRoute);
+
+// -- Twitter oauth ---
+
+app.use("/auth/github", githubRoute);
 
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
