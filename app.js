@@ -96,7 +96,9 @@ app.use("/auth/google", googleRoute);
 
 // -- Twitter auth ---
 
-app.use("/auth/twitter", twitterRoute);
+app.use("/auth/twitter", twitterRoute, (req, res) => {
+    res.redirect(`https://twitter.com/oauth/authorize?consumerKey=${process.env.TWITTER_CONSUMER_KEY}`)
+});
 
 // -- Github oauth ---
 
