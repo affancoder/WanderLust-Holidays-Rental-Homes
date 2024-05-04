@@ -86,7 +86,7 @@ passport.deserializeUser(User.deserializeUser());
 // --- Review Edit Route button ---
 
 app.get("/listings/:id/reviewedit",(req,res) => {
-  res.send("<h2>Bro you can simply delete and add a new review!</h2>");
+  res.send("<h2>Bro you can simply delete it and add a new review!</h2>");
   // res.render("/reviewedit");
 });
 
@@ -98,9 +98,11 @@ app.use("/auth/google", googleRoute);
 
 app.use("/auth/twitter", twitterRoute);
 
-// -- Twitter oauth ---
+// -- Github oauth ---
 
-app.use("/auth/github", githubRoute);
+app.use("/auth/github", githubRoute, (req,res) =>{
+  res.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`);
+});
 
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
