@@ -9,11 +9,13 @@ Front-end:
 2. Implemented a user-friendly interface for searching and listing properties.
 3. Utilized frameworks such as React.js for building dynamic and interactive user experiences.
 4. Integrated Google Maps API for location-based search and property mapping.
+5. Integrated AI Chat Assistent where you ask any question and you will get answer in the top of Navbar 
 
 Back-end:
 1. Built a RESTful API using Node.js and Express.js to handle user interactions.
 2. Implemented user authentication and authorization using technologies like JWT (JSON Web Tokens).
 3. Created endpoints for property listing, login/sign up and user management.
+4. AI Chat Assistent where you ask any question and you will get answer 
 
 Database:
 1. Utilized a relational database management system MongoDB for storing property and user data.
