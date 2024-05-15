@@ -349,7 +349,7 @@ nav {
 .form-control:focus {
   /* color: #ee3c45 !important; */
   /* background-color: aliceblue; */
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .search-inp {
@@ -358,11 +358,12 @@ nav {
 
 #filters {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: fixed !important;
   align-items: center;
 }
 #filters::-webkit-scrollbar {
   display: none;
+
 }
 #filters {
   -ms-overflow-style: none; /* IE and Edge */
@@ -371,7 +372,7 @@ nav {
 
 .filter {
   text-align: center;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   margin-top: 2rem;
   opacity: 0.8;
 }
@@ -408,7 +409,7 @@ nav {
 
 #filters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* margin: 30px; */
 }
 .filter-width {
@@ -846,5 +847,9 @@ footer {
   }
   #third-fr {
     margin-top: 26px;
+  }
+  /* -- Accordion -- */
+  .accordion{
+    width: 56% !important;
   }
 }
