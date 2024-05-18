@@ -407,6 +407,16 @@ nav {
 
 /* -------------------- Box Filter (index.ejs) ----------------- */
 
+/* .filters-main .filter-width {
+  position: fixed;
+  z-index: 90;
+  background-color: white;
+  height: 140px;
+  margin-top: 80px;
+  overflow-x: scroll;
+  padding: 20px;
+} */
+
 #filters {
   display: flex;
   justify-content: space-evenly;
@@ -414,7 +424,7 @@ nav {
 }
 .filter-width {
   display: flex;
-  width: 60%;
+  width: 62%;
   overflow-x: scroll;
 }
 
@@ -570,6 +580,7 @@ nav {
 
 footer {
   background-color: #ebebee;
+  z-index: 100;
 }
 
 .footer {
@@ -614,6 +625,13 @@ footer {
 .f-info-links a {
   font-size: 1rem;
 }
+
+.logoimg{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px !important;
+}
+
 .lang-inr {
   display: flex;
   justify-content: space-between;
