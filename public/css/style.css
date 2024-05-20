@@ -645,6 +645,17 @@ footer {
   margin-top: -6px;
 }
 
+/* --- Booking system --- */
+
+#booking-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green !important; */
+  height: 50px;
+  width: 26%;
+}
+
 /* ------------------------ Responsive -------------- */
 
 @media (max-width: 1150px) {
