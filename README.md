@@ -16,7 +16,8 @@ Back-end:
 2. Implemented user authentication and authorization using technologies like JWT (JSON Web Tokens).
 3. For making ease for user i have also used Google & Github authetication for fasting registration
 4. Created endpoints for property listing, login/sign up and user management.
-5. AI Chat Assistent where you ask any question and you will get answer 
+5. AI Chat Assistent where you ask any question and you will get answer.
+6. You can actually book a house bcoz i integrated razorpay payment gateway.
 
 Database:
 1. Utilized a relational database management system MongoDB for storing property and user data.
@@ -29,12 +30,14 @@ Additional Features:
 3. Ensured security and data privacy through encryption and data validation.
 4. Deployed the web application on a cloud platform on Cloudinary to make it accessible online.
 5. Google Authentication for fast login or sign-up for a user.
+6. Github Authentication for fast login or sign-up for a user.
+7. Razorpay Payment integration for acutally booking a house.
 
-The Airbnb clone project showcases my proficiency in full-stack web development, from creating an engaging front-end to managing the back-end and database components. It allows users to search for properties and experience the key functionalities of the Airbnb platform in a seamless and secure manner.
+This WanderLust project showcases my proficiency in full-stack web development, from creating an engaging front-end to managing the back-end and database components. It allows users to search for properties and experience the key functionalities of the Airbnb platform in a seamless and secure manner.
 
 ## Deployment
 
-I have deployed my project using render connected with MongoDB Atlas
+I have deployed my project using render connected with the database of MongoDB Atlas.
 
 
 ## Authors
