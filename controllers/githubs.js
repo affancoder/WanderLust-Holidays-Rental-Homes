@@ -1,6 +1,7 @@
 const passport = require("passport");
 const User = require("../models/user.js");
 require('dotenv').config();
+
 let GitHubStrategy = require("passport-github2").Strategy;
 
 passport.use(new GitHubStrategy({
