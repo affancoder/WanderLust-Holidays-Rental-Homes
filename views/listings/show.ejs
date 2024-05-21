@@ -20,12 +20,10 @@
         Hosted by <i><%= listing.owner.username %></i>
       </p>
       <p class="card-text"><b>Description : </b><%= listing.description %></p>
-      <form class="pay-form">
         <p class="card-text">
           <b>Cost : </b>
           &#8377; <%= listing.price.toLocaleString("en-IN") %> &nbsp;/ night
         </p>
-      </form>
       <p class="card-text">
         <b>Category :</b> <%= listing.category.slice(",").join(", ") %>
       </p>
@@ -49,9 +47,9 @@
   <% } %>
 
   <form class="pay-form">
-    <input type="hidden" name="name" value= "<%= listing.title %>"/>
-    <input type="hidden" name="amount" value= "<%= listing.price.toLocaleString("en-IN") %>" />
-    <input type="hidden" name="description" value= "<%= listing.description %>"/>
+    <input type="hidden" name="name" value = "<%= listing.title %>"/>
+    <input type="hidden" name="amount" value = "<%= listing.price %>" />
+    <input type="hidden" name="description" value = "<%= listing.description %>"/>
     <button type="submit" value="Pay Now" class="btn btn-success mx-auto" id="booking-btn">Book House</button>
     <!-- <input type="submit" value="Pay Now" /> -->
   </form>
@@ -582,8 +580,8 @@
 
 <!--------------------- Payment Gateway ------------------>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 <script>
   $(document).ready(function () {
     $(".pay-form").submit(function (e) {
@@ -603,7 +601,7 @@
               currency: "INR",
               name: "" + res.product_name + "",
               description: "" + res.description + "",
-              image: "https://dummyimage.com/600x400/000/fff",
+              image: "<%= listing.image.url %>",
               order_id: "" + res.order_id + "",
               handler: function (response) {
                 alert("Payment Succeeded");
