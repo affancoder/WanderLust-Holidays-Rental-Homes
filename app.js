@@ -16,8 +16,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const googleRoute = require("./routes/google.js");
-const twitterRoute = require("./routes/twitter.js");
+// const twitterRoute = require("./routes/twitter.js");
 const githubRoute = require("./routes/github.js");
+const paymentRoute = require("./routes/paymentRoute");
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
@@ -83,6 +84,8 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use('/',paymentRoute);
+
 // --- Review Edit Route button ---
 
 app.get("/listings/:id/reviewedit",(req,res) => {
@@ -96,8 +99,8 @@ app.use("/auth/google", googleRoute);
 
 // -- Twitter auth ---
 
-// app.use("/auth/twitter", twitterRoute, (req, res) => {
-//     res.redirect(`https://twitter.com/oauth/authorize?consumerKey=${process.env.TWITTER_CONSUMER_KEY}`)
+// app.use("/auth/twitter", twitterRoute, (req,res)=>{
+//   res.redirect(`https://api.twitter.com/oauth/authorize?oauth_token=${request_token}`);
 // });
 
 // -- Github oauth ---
