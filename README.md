@@ -2,7 +2,7 @@
 
 Project Summary:
 
-I have successfully designed and implemented a full-stack Airbnb clone, which replicates the core functionality of the Airbnb platform. This project encompasses various components, including a user-friendly front-end interface, a dynamic back-end server, and a robust database system and also implemented Map API features to locate the rental homes with MVC Framework. Below are the key features and technologies used in this Airbnb clone:
+Developed Full Stack Web Development project named "Wanderlust," a feature-rich web application designed to facilitate the browsing and booking of vacation accommodations, including houses, villas, and farmhouses. This platform allows users to add their own properties to the listing, providing a diverse range of options for potential renters. Key features include a seamless booking system that simplifies the reservation process, integrated chatbot support for instant user assistance, and real-time property location views via Google Live Map. To enhance user experience and security, the application supports fast login options through Google OAuth and GitHub OAuth. The application also boasts a dynamic server for responsive performance and an intuitive, aesthetically pleasing user interface, ensuring an engaging and efficient user experience.
 
 Front-end:
 1. Developed a responsive web application using modern HTML, CSS, and JavaScript.
