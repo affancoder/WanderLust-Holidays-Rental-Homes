@@ -46,13 +46,19 @@
   </div>
   <% } %>
 
-  <form class="pay-form">
-    <input type="hidden" name="name" value = "<%= listing.title %>"/>
-    <input type="hidden" name="amount" value = "<%= listing.price %>" />
-    <input type="hidden" name="description" value = "<%= listing.description %>"/>
-    <button type="submit" value="Pay Now" class="btn btn-success mx-auto" id="booking-btn">Book House</button>
-    <!-- <input type="submit" value="Pay Now" /> -->
-  </form>
+  <!----------------------- Payment Gateway start ----------------------------->
+  <div>
+    <% if(currUser) { %>
+      <form class="pay-form">
+        <input type="hidden" name="name" value = "<%= listing.title %>"/>
+        <input type="hidden" name="amount" value = "<%= listing.price %>" />
+        <input type="hidden" name="description" value = "<%= listing.description %>"/>
+        <button type="submit" value="Pay Now" class="btn btn-success mx-auto" id="booking-btn">Book House</button>
+        <!-- <input type="submit" value="Pay Now" /> -->
+      </form>
+    <% } %>
+  </div>
+  <!-------------------------- Payment Gateway End ----------------------------->
 
   <!--------------------------- Review start here ------------------------------->
 
@@ -568,6 +574,18 @@
       <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           Some properties may <b>Allow</b> pets while others may have restrictions or additional fees for pets. You can filter your search to find pet-friendly properties or contact the property owner/manager for more information about their pet policy.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Do I need to create an account to add a review or make a payment?
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Yes</strong>, you need to be logged in to add a review or make a payment for booking a house. Creating an account ensures that we can provide a secure and personalized experience for all our users. It also helps us verify the authenticity of reviews and manage your bookings efficiently. You can easily sign up or log in using the "Login/Sign Up" button on the top right corner of the website.
         </div>
       </div>
     </div>
