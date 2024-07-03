@@ -20,7 +20,7 @@ body {
 
 #preloader{
   background: #fff url(/images/loader.gif) no-repeat center center;
-  background-size: 30%;
+  background-size: 45%;
   height: 100vh;
   width: 100%;
   position: fixed;
