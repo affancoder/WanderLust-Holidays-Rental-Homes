@@ -20,7 +20,7 @@ body {
 
 #preloader{
   background: #fff url(/images/loader.gif) no-repeat center center;
-  background-size: 45%;
+  background-size: 50%;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -694,6 +694,10 @@ footer {
     overflow-x: hidden;
     offset: none;
     margin-top: 80px;
+  }
+
+  #preloader{
+    background-size: 80%;
   }
 
   .container-fluid {
