@@ -55,10 +55,16 @@ body {
   color: #fe424d !important;
 }
 
-#title {
-  color: #fe424d !important;
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-brand b {
   color: white !important;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .f-info-links {
