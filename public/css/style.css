@@ -21,6 +21,18 @@ body {
   /* Firefox */
 }
 
+/* Apply a fade-in animation to the body */
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* When the body has the class 'loaded', it will fade in */
+body.loaded {
+  opacity: 1;
+}
+
+
 #preloader {
   background: #fff url(/images/loader.gif) no-repeat center center;
   background-size: 50%;
@@ -114,12 +126,15 @@ body {
   transform: translateY(0.4rem);
 }
 
-.fa-facebook , .fa-pinterest , .fa-telegram , .fa-square-instagram{
+.fa-facebook,
+.fa-pinterest,
+.fa-telegram,
+.fa-square-instagram {
   background-color: white !important;
   border: none;
 }
 
-.fa-snapchat{
+.fa-snapchat {
   background-color: #f6df0bd2;
   border-radius: 50%;
 }
@@ -308,6 +323,47 @@ textarea {
   border-radius: 10px;
   /* background-color: transparent !important; */
   /* color: #151515; */
+}
+
+/* --- Contact Form --- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px !important;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.contact-form input{
+  border-radius: 16px;
+  padding: 10px 20px;
+  margin-top: 6px;
+}
+
+.contact-form textarea {
+  border-radius: 16px;
+  padding: 10px 20px;
+  margin-top: 6px;
+  height: 140px !important;  
+}
+
+.contact-form button {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -10%) !important;
+}
+
+.btn-close {
+  position: relative;
+  left: 60px !important;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
 }
 
 /* --------------------- Map ------------------- */
