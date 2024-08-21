@@ -29,3 +29,9 @@ const loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
 });
+
+// slowly loader
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add('loaded');
+});
