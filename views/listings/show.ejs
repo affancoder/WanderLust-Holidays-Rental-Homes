@@ -10,20 +10,16 @@
     <h3 id="lis-tit"><%= listing.title %></h3>
   </div>
   <div class="card col-6 offset-3 show-card listing-card">
-    <img
-      src="<%= listing.image.url %>"
-      class="card-img-top show-img"
-      alt="listing_image"
-    />
+    <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image" />
     <div class="card-body">
       <p class="card-text mt-2">
         Hosted by <i><%= listing.owner.username %></i>
       </p>
       <p class="card-text"><b>Description : </b><%= listing.description %></p>
-        <p class="card-text">
-          <b>Cost : </b>
-          &#8377; <%= listing.price.toLocaleString("en-IN") %> &nbsp;/ night
-        </p>
+      <p class="card-text">
+        <b>Cost : </b>
+        &#8377; <%= listing.price.toLocaleString("en-IN") %> &nbsp;/ night
+      </p>
       <p class="card-text">
         <b>Category :</b> <%= listing.category.slice(",").join(", ") %>
       </p>
@@ -34,11 +30,7 @@
   <br />
   <% if(currUser && listing.owner._id.equals(currUser._id)) { %>
   <div class="btns mb-5" style="margin-left: 10px">
-    <a
-      href="/listings/<%= listing._id %>/edit"
-      class="btn btn-dark col-1 offset-3 edit-btn"
-      >Edit</a
-    >
+    <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
 
     <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
       <button class="btn btn-dark offset-5">Delete</button>
@@ -49,13 +41,13 @@
   <!----------------------- Payment Gateway start ----------------------------->
   <div>
     <% if(currUser) { %>
-      <form class="pay-form">
-        <input type="hidden" name="name" value = "<%= listing.title %>"/>
-        <input type="hidden" name="amount" value = "<%= listing.price %>" />
-        <input type="hidden" name="description" value = "<%= listing.description %>"/>
-        <button type="submit" value="Pay Now" class="btn btn-success mx-auto" id="booking-btn">Book House</button>
-        <!-- <input type="submit" value="Pay Now" /> -->
-      </form>
+    <form class="pay-form">
+      <input type="hidden" name="name" value="<%= listing.title %>" />
+      <input type="hidden" name="amount" value="<%= listing.price %>" />
+      <input type="hidden" name="description" value="<%= listing.description %>" />
+      <button type="submit" value="Pay Now" class="btn btn-success mx-auto" id="booking-btn">Book House</button>
+      <!-- <input type="submit" value="Pay Now" /> -->
+    </form>
     <% } %>
   </div>
   <!-------------------------- Payment Gateway End ----------------------------->
@@ -66,71 +58,26 @@
     <% if(currUser) { %>
     <hr class="hrshow" />
     <h4><i class="fa-regular fa-comment"></i> Leave a Review</h4>
-    <form
-      action="/listings/<%= listing._id %>/reviews"
-      method="POST"
-      novalidate
-      class="needs-validation"
-    >
+    <form action="/listings/<%= listing._id %>/reviews" method="POST" novalidate class="needs-validation">
       <div class="mb-3 mt-3">
         <label for="rating" class="form-label"><i id="rating">Rating</i></label>
         <fieldset class="starability-slot">
-          <input
-            type="radio"
-            id="no-rate"
-            class="input-no-rate"
-            name="review[rating]"
-            value="1"
-            checked
-            aria-label="No rating."
-          />
-          <input
-            type="radio"
-            id="first-rate1"
-            name="review[rating]"
-            value="1"
-          />
+          <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
+          <input type="radio" id="first-rate1" name="review[rating]" value="1" />
           <label for="first-rate1" title="Terrible">1 star</label>
-          <input
-            type="radio"
-            id="first-rate2"
-            name="review[rating]"
-            value="2"
-          />
+          <input type="radio" id="first-rate2" name="review[rating]" value="2" />
           <label for="first-rate2" title="Not good">2 stars</label>
-          <input
-            type="radio"
-            id="first-rate3"
-            name="review[rating]"
-            value="3"
-          />
+          <input type="radio" id="first-rate3" name="review[rating]" value="3" />
           <label for="first-rate3" title="Average">3 stars</label>
-          <input
-            type="radio"
-            id="first-rate4"
-            name="review[rating]"
-            value="4"
-          />
+          <input type="radio" id="first-rate4" name="review[rating]" value="4" />
           <label for="first-rate4" title="Very good">4 stars</label>
-          <input
-            type="radio"
-            id="first-rate5"
-            name="review[rating]"
-            value="5"
-          />
+          <input type="radio" id="first-rate5" name="review[rating]" value="5" />
           <label for="first-rate5" title="Amazing">5 stars</label>
         </fieldset>
       </div>
       <div class="mb-3 mt-3" id="comments">
         <label for="comment" class="form-label">Comments</label>
-        <textarea
-          name="review[comment]"
-          id="comment"
-          cols="25"
-          rows="4"
-          class="form-control"
-          required
-        ></textarea>
+        <textarea name="review[comment]" id="comment" cols="25" rows="4" class="form-control" required></textarea>
         <div class="invalid-feedback">Please add some comments for review</div>
       </div>
       <button class="btn btn-success">Submit</button>
@@ -146,22 +93,14 @@
             <i class="fa-solid fa-circle-user fa-lg" style="color: #ff0000;">&nbsp;</i><%=
             review.author.username %>
           </h5>
-          <p
-            class="starability-result card-text"
-            data-rating="<%= review.rating %>"
-          ></p>
+          <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
           <p class="card-text mb-4"><%= review.comment %></p>
           <% if(currUser && currUser._id.equals(review.author._id)) { %>
           <div class="btn-review">
-            <form method="POST"
-            action="/listings/<%= listing._id %>/reviews/<%= review._id %>/_method=PATCH">
+            <form method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>/_method=PATCH">
               <button class="btn btn-sm btn-success"><a href="/listings/<%= review._id %>/reviewedit">Edit</a></button>
             </form>
-            <form
-              class="mb-3"
-              method="POST"
-              action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
-            >
+            <form class="mb-3" method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
               <button class="btn btn-sm btn-danger">Delete</button>
             </form>
           </div>
@@ -190,13 +129,7 @@
       <i class="ri-steam-fill"><span> Gaming</span></i>
     </div>
     <div class="offers">
-      <button
-        id="offers"
-        type="button"
-        class="btn btn-outline-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
+      <button id="offers" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Show all 50 amenities
       </button>
       <!-- Button trigger modal -->
@@ -211,13 +144,7 @@
       </button> -->
 
       <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -292,11 +219,7 @@
               </ul>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-outline-dark"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
                 Close
               </button>
               <!-- <button type="button" class="btn btn-outline-dark">
@@ -330,69 +253,47 @@
 
     <div class="services-offer">
       <!-- Button trigger modal -->
-      <button
-        id="offers"
-        type="button"
-        class="btn btn-outline-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
+      <button id="offers" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Message a trip designer
       </button>
-
+    
       <!-- Modal -->
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Owned by <%= listing.owner.username %>
+                <i class="fa-regular fa-circle-user"></i> <%= listing.owner.username %>
+                <span>contacting...</span>
               </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="johnduke19@example.com"
-                />
+                <div class="contact-form">
+                  <form action="https://formspree.io/f/xpwaywop" method="POST">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" class="form-control" placeholder="Azim Premji" required>
+            
+                      <label for="email" class="mt-3">Email:</label>
+                      <input type="email" id="email" name="_replyto" class="form-control" placeholder="azimpremji@gmail.com" required>
+            
+                      <label for="message" class="mt-3">Message:</label>
+                      <textarea id="message" name="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+            
+                      <button type="submit" class="btn btn-success mt-4">Send</button>
+                      <!-- <button type="button" class="btn btn-secondary mt-4" data-bs-dismiss="modal">Close</button> -->
+                    </div>
+                  </form>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Write your requirments below</label
-                >
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                data-bs-dismiss="modal"
-              >
-                Submit
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <hr class="hrshow" />
   </div>
 
@@ -402,14 +303,9 @@
 
   <div class="col-8 offset-3 mb-3">
     <h4 class="maph3">
-      <i class="fa-solid fa-compass fa-spin fa-sm" style="color: #ff0000"></i
-      >&nbsp;Where you’ll be
+      <i class="fa-solid fa-compass fa-spin fa-sm" style="color: #ff0000"></i>&nbsp;Where you’ll be
     </h4>
-    <p
-      class="card-text maph3"
-      id="location-p"
-      style="margin-top: 10px; font-weight: 100 !important"
-    >
+    <p class="card-text maph3" id="location-p" style="margin-top: 10px; font-weight: 100 !important">
       <%= listing.location %>, <%= listing.country %>
     </p>
     <div style="height: 20px"></div>
@@ -435,36 +331,20 @@
         <p>Response rate : 100%</p>
         <p style="margin-top: -14px">Response time : within an hour</p>
       </div>
-      <span
-        ><i class="ri-verified-badge-line">Identity Verified</i>
-        <i class="ri-medal-line">Superhost</i></span
-      >
+      <span><i class="ri-verified-badge-line">Identity Verified</i>
+        <i class="ri-medal-line">Superhost</i></span>
       <!-- <button class="mx-auto btn btn-outline-dark">
         <a href="https://www.mail.google.com/"></a>Contact host
       </button> -->
 
       <div class="services-offer">
         <!-- Button trigger modal -->
-        <button
-          id="offers"
-          type="button"
-          class="btn btn-outline-dark mx-auto"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-        >
+        <button id="offers" type="button" class="btn btn-outline-dark mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           Contact Host
         </button>
 
         <!-- Modal -->
-        <div
-          class="modal fade"
-          id="staticBackdrop"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -474,33 +354,16 @@
               </div>
               <div class="modal-body">
                 <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Email address</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="johnduke19@example.com"
-                  />
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="johnduke19@example.com" />
                 </div>
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label"
-                    >Write your requirments below</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                  ></textarea>
+                  <label for="exampleFormControlTextarea1" class="form-label">Write your requirments below</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
               </div>
               <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-success"
-                  data-bs-dismiss="modal"
-                >
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">
                   Submit
                 </button>
               </div>
@@ -519,7 +382,7 @@
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        How do I search for available properties?
+          How do I search for available properties?
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -554,9 +417,8 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="#collapseFour"       
-        >
-        What payment methods are accepted?
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="#collapseFour">
+          What payment methods are accepted?
         </button>
       </h2>
       <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -601,8 +463,8 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <script>
-  $(document).ready(function () {
-    $(".pay-form").submit(function (e) {
+  $(document).ready(function() {
+    $(".pay-form").submit(function(e) {
       e.preventDefault();
 
       let formData = $(this).serialize();
@@ -611,7 +473,7 @@
         url: "/createOrder",
         type: "POST",
         data: formData,
-        success: function (res) {
+        success: function(res) {
           if (res.success) {
             var options = {
               key: "" + res.key_id + "",
@@ -621,7 +483,7 @@
               description: "" + res.description + "",
               image: "<%= listing.image.url %>",
               order_id: "" + res.order_id + "",
-              handler: function (response) {
+              handler: function(response) {
                 alert("Payment Succeeded");
                 // window.open("/","_self")
               },
@@ -638,7 +500,7 @@
               },
             };
             var razorpayObject = new Razorpay(options);
-            razorpayObject.on("payment.failed", function (response) {
+            razorpayObject.on("payment.failed", function(response) {
               alert("Payment Failed");
             });
             razorpayObject.open();
