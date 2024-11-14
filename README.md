@@ -36,12 +36,6 @@ Additional Features:
 
 This WanderLust project showcases my proficiency in full-stack web development, from creating an engaging front-end to managing the back-end and database components. It allows users to search for properties and experience the key functionalities of the Airbnb platform in a seamless and secure manner.
 
-## Deployment
-
-I have deployed my project using render connected with the database of MongoDB Atlas.
-
-Live : https://wanderlust-projectaffan.onrender.com/
-
 ## Authors
 
 - [@affancoder](https://github.com/affancoder)
