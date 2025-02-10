@@ -32,7 +32,6 @@ body.loaded {
   opacity: 1;
 }
 
-
 #preloader {
   background: #fff url(/images/loader.gif) no-repeat center center;
   background-size: 50%;
@@ -49,7 +48,15 @@ body.loaded {
 .navbar {
   position: fixed;
   height: 4.5rem;
-  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
   z-index: 100 !important;
 }
 
@@ -164,7 +171,6 @@ body.loaded {
   width: 40px;
   height: 40px;
   border: none;
-
 }
 
 /* -------------------- Cards -------------------- */
@@ -335,7 +341,7 @@ textarea {
   font-weight: bold;
 }
 
-.contact-form input{
+.contact-form input {
   border-radius: 16px;
   padding: 10px 20px;
   margin-top: 6px;
@@ -345,7 +351,7 @@ textarea {
   border-radius: 16px;
   padding: 10px 20px;
   margin-top: 6px;
-  height: 140px !important;  
+  height: 140px !important;
 }
 
 .contact-form button {
@@ -355,15 +361,24 @@ textarea {
 }
 
 .btn-close {
-  position: relative;
-  left: 50px !important;
+  /* position: relative; */
+  /* left: 50px !important; */
   font-size: 1.7rem;
   cursor: pointer;
+  color: red;
 }
 
 .btn-close:hover {
   transition: all 0.5s ease-in-out;
   transform: rotate(90deg);
+}
+
+.alert-dismissible .btn-close {
+  margin-left: auto !important;
+  position: absolute !important;
+  top: 0px !important;
+  right: 0 !important;
+  padding: 1rem 1rem !important;
 }
 
 /* --------------------- Map ------------------- */
@@ -475,7 +490,6 @@ nav {
 
 #filters::-webkit-scrollbar {
   display: none;
-
 }
 
 #filters {
@@ -703,14 +717,30 @@ nav {
 
 footer {
   /* background-color: #ebebee; */
-  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
   color: white;
   font-weight: bold;
   z-index: 1000;
 }
 
 .f-info {
-  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
 }
 
 .footer {
@@ -752,14 +782,14 @@ footer {
   cursor: pointer;
 }
 
-#instagram{
+#instagram {
   width: 36px;
   border: none;
   cursor: pointer;
   margin-right: 11px;
 }
 
-#instagram:hover{
+#instagram:hover {
   transform: translateY(0.5rem);
   transition: all 0.5s ease-in-out;
 }
@@ -789,11 +819,14 @@ footer {
 }
 
 .scrollup button {
-  background-image: linear-gradient(to top, #ef3d43 0%, #f9a4de 99%, #fecfef 100%);
+  /* background-image: linear-gradient(to top, #ef3d43 0%, #f57b3a 99%); */
+  background-color: transparent !important;
+  color: #fff;
   height: 42px;
   width: 36px;
-  border: 1px solid #8b8b8d;
-  border-radius: 8px;
+  border: 1px solid white;
+  border-style: ridge;
+  border-radius: 4px;
 }
 
 /* --- Booking system --- */
@@ -809,29 +842,7 @@ footer {
 
 /* ------------------------ Responsive -------------- */
 
-@media (max-width: 1150px) {
-
-  /* .filter-box {
-    display: none;
-  } */
-  .responsive {
-    display: flex !important;
-    justify-content: center !important;
-    visibility: unset;
-    margin: 12px 16px 25px 16px;
-    /* border: 1px solid silver; */
-    border-style: ridge;
-    border-radius: 16px;
-    padding: 16px;
-  }
-
-  .tax-toggle {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-
+@media (max-width: 768px) {
   HTML,
   body {
     width: 100%;
@@ -846,17 +857,25 @@ footer {
 
   .container-fluid {
     /* background-color: #ebebee; */
-    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-image: linear-gradient(
+      to right,
+      #ff8177 0%,
+      #ff867a 0%,
+      #ff8c7f 21%,
+      #f99185 52%,
+      #cf556c 78%,
+      #b12a5b 100%
+    );
     color: white;
     text-align: center;
   }
 
   .navbar {
     position: fixed !important;
-    color: white;
+    color: white !important;
     width: 100%;
+    flex-grow: 1;
   }
-
 
   .search-inp {
     width: 210px !important;
@@ -1045,6 +1064,37 @@ footer {
 
   /* -- Accordion -- */
   .accordion {
-    width: 56% !important;
+    width: 50% !important;
   }
 }
+
+@media only screen and (min-width: 430px) and (max-width: 667px) {
+  .container {
+    margin-left: -20px !important;
+  }
+
+  .card-body {
+    margin-left: auto !important;
+  }
+
+  #show-body img {
+    width: 100% !important;
+  }
+
+  #show-body h3 {
+    text-align: center;
+  }
+
+  #hosted > div {
+    margin-left: -26px;
+    padding: 0 30px !important;
+  }
+
+  /* -- Accordion -- */
+
+  .accordion > div {
+    margin: 0px 50px 0px 0px !important;
+  }
+}
+
+@media query (min-width: 768px) and (max-width);
