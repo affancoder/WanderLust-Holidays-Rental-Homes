@@ -1069,13 +1069,10 @@ footer {
 }
 
 @media only screen and (min-width: 414px) and (max-width: 667px) {
-  .container {
-    margin-left: -20px !important;
+  #show-body {
+    padding: 0 36px 0 0 !important;
+    /* margin-right: -20px !important; */
   }
-
-  /* .card-body {
-    margin-left: auto !important;
-  } */
 
   #show-body img {
     width: 100% !important;
@@ -1098,4 +1095,19 @@ footer {
   }
 }
 
-/* @media query (min-width: 768px) and (max-width); */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html,
+  body {
+    display: block;
+  }
+
+  .nav-search {
+    display: none;
+  }
+
+  #ShowImg {
+    width: 400px !important;
+    height: 400px !important;
+    margin-left: auto !important;
+  }
+}
