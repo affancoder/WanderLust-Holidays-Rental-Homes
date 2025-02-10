@@ -1068,17 +1068,18 @@ footer {
   }
 }
 
-@media only screen and (min-width: 430px) and (max-width: 667px) {
+@media only screen and (min-width: 414px) and (max-width: 667px) {
   .container {
     margin-left: -20px !important;
   }
 
-  .card-body {
+  /* .card-body {
     margin-left: auto !important;
-  }
+  } */
 
   #show-body img {
     width: 100% !important;
+    margin: auto !important;
   }
 
   #show-body h3 {
@@ -1093,8 +1094,8 @@ footer {
   /* -- Accordion -- */
 
   .accordion > div {
-    margin: 0px 50px 0px 0px !important;
+    width: 100%;
   }
 }
 
-@media query (min-width: 768px) and (max-width);
+/* @media query (min-width: 768px) and (max-width); */
