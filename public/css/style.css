@@ -1096,18 +1096,26 @@ footer {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  html,
-  body {
-    display: block;
+
+  .navbar {
+    position: fixed !important;
+    color: white !important;
+    width: 100%;
+    flex-grow: 1;
   }
 
   .nav-search {
     display: none;
   }
 
-  #ShowImg {
-    width: 400px !important;
-    height: 400px !important;
-    margin-left: auto !important;
+  #show-body{
+    display: inline;
   }
+
+  #show-body img{
+    width: 100% !important;
+    height: 300px;
+    margin: auto !important;
+  }
+
 }
