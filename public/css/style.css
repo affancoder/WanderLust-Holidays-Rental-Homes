@@ -1096,7 +1096,6 @@ footer {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
   .navbar {
     position: fixed !important;
     color: white !important;
@@ -1108,14 +1107,24 @@ footer {
     display: none;
   }
 
-  #show-body{
+  #show-body {
     display: inline;
   }
 
-  #show-body img{
+  #show-body img {
     width: 100% !important;
     height: 300px;
     margin: auto !important;
   }
 
+  #log{
+    display:none;
+  }
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+  .container {
+    margin-top: 80px;
+  }
 }
