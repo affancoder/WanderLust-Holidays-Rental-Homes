@@ -36,6 +36,23 @@ Additional Features:
 
 This WanderLust project showcases my proficiency in full-stack web development, from creating an engaging front-end to managing the back-end and database components. It allows users to search for properties and experience the key functionalities of the Airbnb platform in a seamless and secure manner.
 
+## Images
+
+![Screenshot (29)](https://github.com/user-attachments/assets/a8f82ec5-16e3-4101-a783-a886772aef58)
+![Screenshot (30)](https://github.com/user-attachments/assets/284c8649-530d-4f3a-be9f-aef2f07bbe2d)
+![Screenshot (31)](https://github.com/user-attachments/assets/3efd8109-15c1-4b7d-a2ab-df937b5beaef)
+![Screenshot (32)](https://github.com/user-attachments/assets/b531b143-a79e-4d07-80e4-bf329071ed6b)
+![Screenshot (33)](https://github.com/user-attachments/assets/90b3d649-382f-4844-b631-942c2f8f654b)
+![Screenshot (34)](https://github.com/user-attachments/assets/cb3f3eca-abfe-4a19-8cbf-5c58f19a24a2)
+![Screenshot (35)](https://github.com/user-attachments/assets/4dffd93a-d2c9-41f8-ac08-a04d64f1fa6d)
+![Screenshot (23)](https://github.com/user-attachments/assets/17cc8789-092e-4876-a73d-b3e8a20f7264)
+![Screenshot (24)](https://github.com/user-attachments/assets/bd1d4ad2-e207-4579-b5b0-41cc59748592)
+![Screenshot (25)](https://github.com/user-attachments/assets/b522c1d5-6bd6-45b7-a0c4-3eb16f0ec606)
+![Screenshot (26)](https://github.com/user-attachments/assets/9e653f66-bf2a-40ca-861d-3a3fc0e2afe8)
+![Screenshot (27)](https://github.com/user-attachments/assets/07b11dc6-399a-45da-ba6e-78d5d542e4c9)
+![Screenshot (28)](https://github.com/user-attachments/assets/773ec572-3116-4fcf-a4c0-c698d8e51d73)
+
+
 ## Authors
 
 - [@affancoder](https://github.com/affancoder)
